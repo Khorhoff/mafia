@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mafia.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="Purple" Padding="24" CornerRadius="0" Grid.Column="0" Grid.Row="0">
+            <Label Text="Станьте ведущим в игре Мафия!" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+        <Frame BackgroundColor="#B68D8D" Grid.Column="0" Grid.Row="1">
+            <RelativeLayout>
+                <Button x:Name="StartButton" Text="Старт" Clicked="StartButton_Clicked" HorizontalOptions="Start" VerticalOptions="Start"
+                        HeightRequest="75" WidthRequest="150" BackgroundColor="#0BF0D0" BorderWidth="2" BorderColor="#545454"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-75}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0, Constant=50}"/>
+                <Button x:Name="RoleButton" Text="Роли" Clicked="RoleButton_Clicked" HorizontalOptions="Start" VerticalOptions="Start"
+                        HeightRequest="75" WidthRequest="150" BackgroundColor="#0BF0D0" BorderWidth="2" BorderColor="#545454"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=StartButton, Property=X, Factor=1, Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=StartButton, Property=Y, Factor=1, Constant=100}"/>
+                <Button x:Name="OptionsButton" Text="Настройки" Clicked="OptionsButton_Clicked" HorizontalOptions="Start" VerticalOptions="Start"
+                        HeightRequest="75" WidthRequest="150" BackgroundColor="#0BF0D0" BorderWidth="2" BorderColor="#545454"
+                        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RoleButton, Property=X, Factor=1, Constant=0}"
+                        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RoleButton, Property=Y, Factor=1, Constant=100}"/>
+            </RelativeLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

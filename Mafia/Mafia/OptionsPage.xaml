@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mafia.OptionsPage"
+             BackgroundColor="Blue">
+
+    <StackLayout Padding="15">
+        <Label Text="Общие настройки" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" TextColor="#C6C726" Margin="15,5,0,0"/>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" BackgroundColor="#F0ADAD" Padding="10, 0" WidthRequest="300">
+                <Label Text="Длительность обсуждения днем (мин): " FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                <Entry x:Name="DiscussionDuration" Text = "" WidthRequest="50" Keyboard="Numeric" Margin="10,0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="#F0ADAD" Padding="10, 0" WidthRequest="300">
+                <Label Text="Длительность выбора ночью (сек): " FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                <Entry x:Name="SelectionDuration" Text = "" WidthRequest="50" Keyboard="Numeric" Margin="10,0"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Button x:Name="SaveButton" Text="Сохранить" Clicked="SaveButton_Clicked" HorizontalOptions="Center"
+                        HeightRequest="50" WidthRequest="150" BackgroundColor="#0BF0D0" BorderWidth="2" BorderColor="#545454"/>
+                <Button x:Name="BackButton" Text="Назад" Clicked="BackButton_Clicked" HorizontalOptions="Center"
+                        HeightRequest="50" WidthRequest="150" BackgroundColor="#0BF0D0" BorderWidth="2" BorderColor="#545454"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

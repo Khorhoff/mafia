@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mafia.GamePage"
+             BackgroundColor="DeepSkyBlue">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Day">DeepSkyBlue</Color>
+            <Color x:Key="Night">Blue</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="EndGame" Text="Завершить" Clicked="EndGame_Clicked"  HorizontalOptions="Start" TextColor="White" BorderColor="Gray" BackgroundColor="#7C7C51" Margin="5,5,0,0"/>
+            <Label x:Name="GameTime" Text="День 0" VerticalOptions="Center" FontSize="Large" TextColor="#FF0000" Margin="15,5,0,0"/>
+            <Label x:Name="TimerLabel" Text=""  VerticalOptions="Center" FontSize="Large" TextColor="#FF0000" Margin="15,5,0,0"/>
+        </StackLayout>
+        <ScrollView Padding="15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout x:Name="PlayersStack" Grid.Row="0" Grid.Column="0">
+
+                </StackLayout>
+                <StackLayout x:Name="PlayersChoisesStack" Grid.Row="0" Grid.Column="1">
+
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+        <Button x:Name="GoButton" Text="Начать игру" Clicked="GoButton_Clicked" HorizontalOptions="Center" VerticalOptions="End" TextColor="White" BorderColor="Gray" BackgroundColor="#7C7C51" Margin="15"/>
+        <Button x:Name="PassButton" Text="Пропустить" Clicked="PassButton_Clicked" HorizontalOptions="Center" VerticalOptions="End" TextColor="White" BorderColor="Gray" BackgroundColor="#7C7C51" Margin="15"/>
+        <Editor x:Name="GameMess" BackgroundColor="White" HeightRequest="80" Margin="15,50,15,15"/>
+    </StackLayout>
+</ContentPage>

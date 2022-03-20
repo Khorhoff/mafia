@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mafia.GameCreationPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="Purple" Padding="24" CornerRadius="0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="BackButton" Text="Назад" Clicked="BackButton_Clicked" HorizontalOptions="Start" TextColor="White" BorderColor="Gray" BackgroundColor="#7C7C51"/>
+                <Label Text="Создание игры" VerticalOptions="Center" FontSize="Large" TextColor="#C6C726" Margin="15,5,0,0"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#B68D8D" Grid.Column="0" Grid.Row="1">
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="Количество игроков:" FontAttributes="Bold,Italic"/>
+                        <Entry x:Name="PlayersCount" Completed="PlayersCount_Completed" Keyboard="Numeric" WidthRequest="50"/>
+                        <BoxView Color="Gray"  HeightRequest="2" HorizontalOptions="Fill" />
+                    </StackLayout>
+                    <StackLayout x:Name="PlayersStack">
+                        
+                    </StackLayout>
+                </StackLayout>
+                
+            </ScrollView>
+        </Frame>
+
+        <Frame Grid.Column="1" Grid.Row="1" BackgroundColor="#5CB0BE">
+            <ScrollView>
+                <StackLayout x:Name="RoleStack" IsEnabled="False">
+                    <Label Text="Мафия:" FontAttributes="Bold,Italic"/>
+                    <Entry x:Name="MafiaCount" Text="0" TextChanged="MafiaCount_TextChanged" Keyboard="Numeric" WidthRequest="50" IsEnabled="False"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="MinusMaf" Text="-" Clicked="MinusMaf_Clicked" WidthRequest="50" HeightRequest="50" Margin="0,0,25,0"/>
+                        <Button x:Name="PlusMaf" Text="+" Clicked="PlusMaf_Clicked" WidthRequest="50" HeightRequest="50" Margin="25,0,0,0"/>
+                    </StackLayout>
+
+                    <Label Text="Мирный житель:" FontAttributes="Bold,Italic"/>
+                    <Entry x:Name="CivilianCount" Text="0" TextChanged="CivilianCount_TextChanged" Keyboard="Numeric" WidthRequest="50" IsEnabled="False"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="MinusCiv" Text="-" Clicked="MinusCiv_Clicked" WidthRequest="50" HeightRequest="50" Margin="0,0,25,0"/>
+                        <Button x:Name="PlusCiv" Text="+" Clicked="PlusCiv_Clicked" WidthRequest="50" HeightRequest="50" Margin="25,0,0,0"/>
+                    </StackLayout>
+                    
+                    <Label Text="Доктор:" FontAttributes="Bold,Italic"/>
+                    <Switch x:Name="IsDoctor" IsToggled="False" OnColor="Blue" Toggled="IsDoctor_Toggled"/>
+                    
+                    <Label Text="Любовница:" FontAttributes="Bold,Italic"/>
+                    <Switch x:Name="IsMistress" IsToggled="False" OnColor="Blue" Toggled="IsMistress_Toggled"/>
+                    
+                    <Label Text="Комиссар:" FontAttributes="Bold,Italic"/>
+                    <Switch x:Name="IsCommissioner" IsToggled="False" OnColor="Blue" Toggled="IsCommissioner_Toggled"/>
+                    
+                    <Label Text="Дон мафии:" FontAttributes="Bold,Italic"/>
+                    <Switch x:Name="IsDon" IsToggled="False" OnColor="Blue" Toggled="IsDon_Toggled"/>
+                    
+                    <Label Text="Маньяк:" FontAttributes="Bold,Italic"/>
+                    <Switch x:Name="IsManiac" IsToggled="False" OnColor="Blue" Toggled="IsManiac_Toggled"/>
+
+                    <Label Text="Журналист:" FontAttributes="Bold,Italic"/>
+                    <Switch x:Name="IsJournalist" IsToggled="False" OnColor="Blue" Toggled="IsJournalist_Toggled"/>
+
+                    <BoxView Color="Gray"  HeightRequest="2" HorizontalOptions="Fill"/>
+
+                    <Button x:Name="HandOutRoles" Text="Создать" Clicked="HandOutRoles_Clicked"/>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+        
+    </Grid>
+</ContentPage>

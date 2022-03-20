@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mafia.RolePage"
+             BackgroundColor="#3E26CA">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="BackButton" Text="Назад" Clicked="BackButton_Clicked" HorizontalOptions="Start" TextColor="White" BorderColor="Gray" BackgroundColor="#7C7C51" Margin="5,5,0,0"/>
+                <Label Text="Игровые роли" VerticalOptions="Center" FontSize="Large" TextColor="#C6C726" Margin="15,5,0,0"/>
+            </StackLayout>
+            <BoxView Color="Gray"  HeightRequest="2" HorizontalOptions="Fill" />
+            <BoxView Color="Gray"  HeightRequest="2" HorizontalOptions="Fill" />
+            <Frame BorderColor="Gray" BackgroundColor="#e1e1e1" CornerRadius="1">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Мафия (Команда: черная)" FontSize="Large" FontAttributes="Bold"/>
+                            <Span Text=" - ночью вам предоставлена возможность убрать мешающих вам игроков, а днем пытается отвести от себя подозрения. " FontSize="Medium"/>
+                            <Span Text="Условие победы - в живых остаются игроки только черной команды" FontAttributes="Bold" ForegroundColor="Red" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame BorderColor="Gray" BackgroundColor="#e1e1e1" CornerRadius="1">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Мирный житель (Команда: красная)" FontSize="Large" FontAttributes="Bold"/>
+                            <Span Text=" - ночью спокойно спит, днем пытается вичислить мафию. " FontSize="Medium"/>
+                            <Span Text="Условие победы - в живых остаются игроки только красной команды" FontAttributes="Bold" ForegroundColor="Red" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame BorderColor="Gray" BackgroundColor="#e1e1e1" CornerRadius="1">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Доктор (Команда: красная)" FontSize="Large" FontAttributes="Bold"/>
+                            <Span Text=" - ночью вы можете выбрать одного человека, которого вы будете лечить. " FontSize="Medium"/>
+                            <Span Text="Условие победы - в живых остаются игроки только красной команды" FontAttributes="Bold" ForegroundColor="Red" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame BorderColor="Gray" BackgroundColor="#e1e1e1" CornerRadius="1">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Любовница (Команда: красная)" FontSize="Large" FontAttributes="Bold"/>
+                            <Span Text=" - ночью вы можете посетить одного человека, который не сможет ничего делать ночью и участвовать в голосовании днем. " FontSize="Medium"/>
+                            <Span Text="Условие победы - в живых остаются игроки только красной команды" FontAttributes="Bold" ForegroundColor="Red" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame BorderColor="Gray" BackgroundColor="#e1e1e1" CornerRadius="1">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Журналист (Комадна: красная)" FontSize="Large" FontAttributes="Bold"/>
+                            <Span Text=" - ночью ваша обязанность - написать журнал, выбрав двух человек которых еще не было в журнале, и проверить, находятся они в разных или одной командах. Но будьте осторожнее с выводами, маньяк маскируется под мирного жителя. " FontSize="Medium"/>
+                            <Span Text="Условие победы - в живых остаются игроки только красной команды" FontAttributes="Bold" ForegroundColor="Red" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame BorderColor="Gray" BackgroundColor="#e1e1e1" CornerRadius="1">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Комиссар (Команда: красная)" FontSize="Large" FontAttributes="Bold"/>
+                            <Span Text=" - ночью ваша задача найти мафию, проверяя по одному человеку за ночь. " FontSize="Medium"/>
+                            <Span Text="Условие победы - в живых остаются игроки только красной команды" FontAttributes="Bold" ForegroundColor="Red" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame BorderColor="Gray" BackgroundColor="#e1e1e1" CornerRadius="1">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Дон мафии (Команда: черная)" FontSize="Large" FontAttributes="Bold"/>
+                            <Span Text=" - ночью вы просыпаетесь с мафией и решаете, кого убить. После просыпаетесь отдельно и пытаетесь найти комиссара. " FontSize="Medium"/>
+                            <Span Text="Условие победы - в живых остаются игроки только черной команды" FontAttributes="Bold" ForegroundColor="Red" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame BorderColor="Gray" BackgroundColor="#e1e1e1" CornerRadius="1">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Маньяк (Команда: серая)" FontSize="Large" FontAttributes="Bold"/>
+                            <Span Text=" - серийный убийца, вы не можете воздержаться от убийств ночью, вы один, однако комиссар и журналист, проверяя вас, считают что вы мирный житель. Условие победы - остаться единственным живым в городе. " FontSize="Medium"/>
+                            <Span Text="Условие победы - остаться единственным живым в городе" FontAttributes="Bold" ForegroundColor="Red" FontSize="Medium"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

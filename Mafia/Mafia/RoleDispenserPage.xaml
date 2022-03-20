@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mafia.RoleDispenserPage"
+             BackgroundColor="Aqua">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Button x:Name="BackButton" Text="Назад" Clicked="BackButton_Clicked" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" BorderColor="Gray" BackgroundColor="#7C7C51" HeightRequest="50" Margin="10,10,0,0"/>
+            <Label Text="Раздача ролей" VerticalOptions="Center" FontSize="Large" TextColor="#C6C726" Margin="15,5,0,0"/>
+        </StackLayout>
+        <StackLayout x:Name="RoleStack" Grid.Column="0" Grid.Row="1">
+            <Label x:Name="PlayerName" Text="" HorizontalOptions="Center" VerticalOptions="Start" FontSize="16" FontAttributes="Bold"/>
+            <Image x:Name="PlayerRole" Source="" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,15,0,0"/>
+        </StackLayout>
+        <StackLayout Grid.Column="1" Grid.Row="1">
+            <Button x:Name="NextRoleButton" Text="->" Clicked="NextRoleButton_Clicked" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" BorderColor="Gray" BackgroundColor="#7C7C51" HeightRequest="50" WidthRequest="50" Margin="10,10,0,0"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
